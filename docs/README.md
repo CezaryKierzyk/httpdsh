@@ -44,3 +44,7 @@ curl -F key1=value1 $SERVER_ADDR:$PORT/filename.json -F uplad=@filename.json
 ## Known issues
 
 If you want to upload data in form of application/json, remember to put trailing empty line with one character due to issue with netcat not passing last line of request to script. Otherwise server will hang unable to parse entire request.
+
+## LICENSE
+
+[MIT](https://choosealicense.com/licenses/mit/)
