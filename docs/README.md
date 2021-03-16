@@ -1,4 +1,4 @@
-#HTTPDSH
+# HTTPDSH
 
 HTTPDSH is a simple POSIX Shell web server designed to receive and respond to POST requests of application/json and multipart/form-data types. Server is only parsing sent .json files and data, with syntax validation and responding with basic statistics of those data.
 
@@ -6,11 +6,11 @@ HTTPDSH is a simple POSIX Shell web server designed to receive and respond to PO
 
 To use this POSIX Shell server you need to have:
 
-   +Ncat 7.91
-   +JQ
-   +Git
+-Ncat 7.91
+-JQ
+-Git
 
-##Installation
+## Installation
 
 To install this simplified server you just have to use this command:
 
