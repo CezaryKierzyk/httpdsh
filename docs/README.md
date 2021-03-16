@@ -6,9 +6,9 @@ HTTPDSH is a simple POSIX Shell web server designed to receive and respond to PO
 
 To use this POSIX Shell server you need to have:
 
-...+Ncat 7.91
-...+JQ
-...+Git
+   +Ncat 7.91
+   +JQ
+   +Git
 
 ##Installation
 
