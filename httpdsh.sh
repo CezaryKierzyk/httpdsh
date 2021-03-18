@@ -5,6 +5,7 @@ declare -a PWD="${HOME}/.httpdsh/files/"
 declare -a PORT="8080"
 
 ###################_____FUNCTIONS_____###################
+
 function print_help (){
 	echo "	Simple POSIX Shell HTTP server
 	USAGE:
@@ -18,22 +19,23 @@ function print_help (){
 	"
 	exit
 }
-function check_directory(){ ! [ -d "$PWD" ] && mkdir -p "$PWD"; }
+
+function check_directory(){ ! [ -d $PWD ] && mkdir -p $PWD; }
 
 ###################________MAIN__________##################
-while test $# -gt 0
-do
+while test $# -gt 0 
+do	
 	case $1 in
 		'-p') PORT=$2
 			;;
-		'-d') PWD="$2"
-			;;
-		'-*') print_help
+		'-d') PWD=$2
 			;;
 		'-h') print_help
 			;;
+		'-*') print_help	
 	esac
 	shift
 done
+
 check_directory
-ncat -k -lp $PORT -e "./handler.sh $PWD" 
+ncat -k -lp $PORT -e "./parser.sh $PWD" 
